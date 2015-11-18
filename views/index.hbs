@@ -1,0 +1,37 @@
+<h1>Bcrypt Test</h1>
+<p>Native Modules work on Azure App Service now!</p>
+
+<hr>
+
+<form method="get" id="hash-api-form" action="#">
+	<p>Enter some text and hit enter to see the bcrypt result</p>
+	<input id="hash-api-secret" name="secret" placeholder="Add your secret to be encrypted here..."></input>
+	<button type="submit">Submit</button>
+</form>
+
+<hr>
+
+<div id="hash-api-results">
+
+</div>
+
+<script>
+	
+	$("#hash-api-form").submit(function(){
+		var secret = $("#hash-api-secret").val();
+		console.log(secret);
+		$.getJSON('/api/hash', {secret: secret}).done(function(data) {
+			var secret = $("<p>").html("<strong>secret</strong>: " + $("#hash-api-secret").val());
+			var salt = $("<p>").html("<strong>salt</strong>: " + data.salt);
+			var hash = $("<p>").html("<strong>hash:</strong> " + data.hash);
+			var div = $("<div>")
+			div.append(secret);
+			div.append(salt);
+			div.append(hash);
+			$('#hash-api-results').prepend(div);
+		});
+		
+		return false;
+	})	
+</script>
+	
