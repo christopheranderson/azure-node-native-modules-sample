@@ -6,6 +6,8 @@ We recommend using node version v4.2.1 and npm v3.3.9 when using native modules,
 
 ![Screenshot of app](./bcrypt-native.png)
 
+File issues in this repo if you have questions or ask on [Stack Overflow](http://stackoverflow.com/questions/tagged/azure-web-sites).
+
 ## Deploy
 
 Press this button below to deploy this sample into an Azure Web App.
