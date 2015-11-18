@@ -1,0 +1,22 @@
+{
+  "name": "chrande-node-native",
+  "description": "Test for bcrypt",
+  "main": "bin/www",
+  "authors": [
+    "Christopher Anderson <chrande@microsoft.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
