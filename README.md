@@ -20,7 +20,7 @@ You can customize deployment via the deploy.cmd file. I've customized this scrip
 
 ## API
 
-### /
+### `/`
 
 Returns the home page
 
@@ -29,13 +29,13 @@ Parameters: None
 Returns:
  - 200 response: html home page
 
-### /api/hash?secret=<string>
+### `/api/hash?secret=<string>`
 
 Returns the salt and hash of a given secret
 
 Parameters:
  - secret : string
- 
+
 Returns:
 
 - 200 response:
